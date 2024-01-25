@@ -1,10 +1,8 @@
 export default async function sitemap() {
-    const data = await (
-        await fetch('https://jsonplaceholder.typicode.com/posts')
-    ).json();
+    const { data } = await (await fetch('http://localhost:4000/blogs')).json();
 
-    return data.map(user => ({
-        url: `${''}/product/${user.id}`,
-        lastModified: new Date().toLocaleDateString(),
+    return data.map(blog => ({
+        url: `${window.location.host}/blog/${blog.title}`,
+        lastModified: new Date(blog.publishAt).toLocaleDateString(),
     }));
 }
