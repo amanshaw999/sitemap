@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "prettier",
+    "eslint:recommended",
+    "plugin:prettier/recommended"
+  ],
+    "rules": {
+      "no-console": ["error", { "allow": ["error"] }],
+      "eqeqeq": "error",
+      "camelcase":["error", {
+        "ignoreDestructuring": true
+      }],
+      "react-hooks/exhaustive-deps": "error"
+    
+    },
+    "env": {
+      "browser": true,
+      "es6": true
+  }
+}
