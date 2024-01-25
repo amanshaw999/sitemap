@@ -10,3 +10,5 @@ export default async function sitemap() {
         lastModified: new Date(blog.publishAt).toLocaleDateString(),
     }));
 }
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
