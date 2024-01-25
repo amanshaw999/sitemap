@@ -1,6 +1,8 @@
 export default async function sitemap() {
     const { data } = await (
-        await fetch('https://server-olth.vercel.app/blogs')
+        await fetch('https://server-olth.vercel.app/blogs', {
+            cache: 'no-cache',
+        })
     ).json();
 
     return data.map(blog => ({
