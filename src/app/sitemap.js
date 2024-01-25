@@ -1,6 +1,6 @@
 export default async function sitemap() {
     const data = await (
-        await fetch('https://jsonplaceholder.typicode.com/users')
+        await fetch('https://jsonplaceholder.typicode.com/posts')
     ).json();
 
     return data.map(user => ({
